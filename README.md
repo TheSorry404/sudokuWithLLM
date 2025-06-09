@@ -16,8 +16,8 @@ Inside them, the MCP part this server template chose FastMCP as this project use
 ## How to Use?
 
 1. Clone this repo
-2. Run a terminal/bash and jump into the root director, run `npm install`
+2. Run a terminal/bash and jump into the root directory, run `npm install`
 3. As I used Qwen China API, you may need to add an API-key global variable. You can visit the Qwen, Aliyun China web in need.
 4. Clone the MCP server template repo, install it, install the `bun` script executer and start the HTTP server `npm install && npm run start:http`
-5. Copy the `tools.ts` into the server's `/src/core/` director and replace the original one
+5. Copy the `tools.ts` in the `mcpserver/src/core` into the server's `/src/core/` directory and replace the original one
 6. Start this project with `npm run dev`, keep it hang on, and play the sudoku now!

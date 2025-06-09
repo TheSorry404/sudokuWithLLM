@@ -1,0 +1,174 @@
+.sudoku-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.sudoku-board {
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  border: 2px solid #333;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sudoku-row {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.sudoku-cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sudoku-cell:hover {
+  background-color: #f0f0f0;
+}
+
+.sudoku-cell.selected {
+  background-color: #e6f7ff;
+  border: 1px solid #1890ff;
+}
+
+.sudoku-cell.initial {
+  font-weight: bold;
+  color: #1890ff;
+  background-color: #f5f5f5;
+}
+
+.border-top {
+  border-top: 2px solid #333;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #333;
+}
+
+.border-left {
+  border-left: 2px solid #333;
+}
+
+.border-right {
+  border-right: 2px solid #333;
+}
+
+.number-pad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.number-pad button {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.number-pad button:hover {
+  background-color: #e6f7ff;
+  border-color: #1890ff;
+}
+
+.completion-message {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 4px;
+  color: #52c41a;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mcp-interface {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+.mcp-interface h3 {
+  margin-top: 0;
+  color: #1890ff;
+}
+
+.mcp-input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.mcp-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+.mcp-input button {
+  padding: 10px 15px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mcp-input button:hover {
+  background-color: #40a9ff;
+}
+
+.mcp-input button:disabled {
+  background-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+.mcp-response {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  margin-top: 15px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-height: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.mcp-response h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .sudoku-cell {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .number-pad {
+    width: 100%;
+  }
+}

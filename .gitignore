@@ -67,3 +67,5 @@ temp/
 # Package files
 *.tgz
 *.tar.gz
+
+package-Xoam.json
